@@ -95,6 +95,15 @@ export default function ServicesPage() {
               Book Your Appointment
             </Link>
           </div>
+
+          <p className="text-center text-sm leading-7 text-muted">
+            We also offer <span className="font-semibold text-brown">mobile appointments</span> for clients who prefer
+            the convenience of having their hair done at home. Pricing may vary —{" "}
+            <Link href="/contact" className="font-semibold text-gold transition-colors hover:text-gold-dark">
+              get in touch to find out more
+            </Link>
+            .
+          </p>
         </div>
       </section>
     </>
