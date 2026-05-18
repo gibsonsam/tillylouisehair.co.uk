@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     "Avanti Hair",
     "colour correction Saddleworth",
     "colour correction Oldham",
+    "mobile hairdresser Saddleworth",
+    "mobile hairdresser Uppermill",
+    "mobile hairdresser Oldham",
+    "mobile hair appointments Saddleworth",
   ],
   openGraph: {
     type: "website",
