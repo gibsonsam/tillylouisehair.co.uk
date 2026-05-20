@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const transition = { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const };
 
-export function HeroSection() {
+export function HeroSection({ id }: { id?: string }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-cream via-surface to-surface-dark">
+    <section id={id} className="relative overflow-hidden bg-gradient-to-br from-cream via-surface to-surface-dark">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute -right-16 top-24 h-56 w-56 rounded-full bg-gold/10 blur-2xl sm:h-72 sm:w-72" />
         <div className="absolute -left-20 bottom-10 h-64 w-64 rounded-full border border-gold/25" />
