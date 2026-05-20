@@ -70,6 +70,10 @@ export const siteConfig = {
     /** Set to null to hide the icon. */
     instagram: "https://instagram.com/tillylouisehair",
     facebook: "https://facebook.com/tilly.louise.756",
+    /** Direct "Write a review" link from Google Business Profile → Get more reviews. */
+    googleReview: "https://g.page/r/CdPhFCvKQnsBEBM/review",
+    /** Public Google Business Profile page. */
+    googleBusiness: "https://share.google/FgRLs4Kb6OJ3iLSHq",
   },
 
   /**

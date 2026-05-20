@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaGoogle } from "react-icons/fa";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/site";
 
@@ -42,6 +42,17 @@ export function Footer() {
                 className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-cream/20 text-cream transition-colors hover:border-gold hover:text-gold"
               >
                 <FaFacebook size={18} />
+              </a>
+            )}
+            {social.googleBusiness && (
+              <a
+                href={social.googleBusiness}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Google Business Profile"
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-cream/20 text-cream transition-colors hover:border-gold hover:text-gold"
+              >
+                <FaGoogle size={18} />
               </a>
             )}
           </div>

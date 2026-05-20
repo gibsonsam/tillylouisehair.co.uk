@@ -3,6 +3,7 @@ import { AboutSnippet } from "@/components/sections/AboutSnippet";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { GalleryPreview } from "@/components/sections/GalleryPreview";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { ReviewCTA } from "@/components/sections/ReviewCTA";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Home() {
       <GalleryPreview />
       <AboutSnippet />
       <ContactSection />
+      <ReviewCTA />
     </>
   );
 }
