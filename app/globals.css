@@ -14,8 +14,39 @@
   --font-sans: var(--font-inter);
 }
 
+/*
+ * --banner-h  Height of the AnnouncementBanner (set inline on <html> from layout.tsx).
+ * --navbar-h  Height of the fixed Navbar.
+ * These are consumed by .hero-top / .home-hero-top to keep page heroes clear of
+ * the combined banner + navbar stack without scattering magic numbers across pages.
+ */
+:root {
+  --banner-h: 0rem;
+  --navbar-h: 5rem; /* matches min-h-20 on the nav shell */
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Inner-page hero top padding — clears navbar + optional banner */
+.hero-top {
+  padding-top: calc(var(--navbar-h) + var(--banner-h) + 2rem);
+}
+@media (min-width: 640px) {
+  .hero-top {
+    padding-top: calc(var(--navbar-h) + var(--banner-h) + 3rem);
+  }
+}
+
+/* Home-page hero top padding — slightly tighter; section fills the viewport */
+.home-hero-top {
+  padding-top: calc(var(--navbar-h) + var(--banner-h) + 1.75rem);
+}
+@media (min-width: 768px) {
+  .home-hero-top {
+    padding-top: calc(var(--navbar-h) + var(--banner-h) + 2rem);
+  }
 }
 
 body {

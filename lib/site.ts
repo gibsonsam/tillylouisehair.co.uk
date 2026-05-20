@@ -71,4 +71,17 @@ export const siteConfig = {
     instagram: "https://instagram.com/tillylouisehair",
     facebook: "https://facebook.com/tilly.louise.756",
   },
+
+  /**
+   * Announcement banner displayed above the navigation bar.
+   * Set `visible` to true to show the banner.
+   * Keep `message` to a single short sentence for best results.
+   * Set `link` / `linkLabel` to null to show the message without a CTA.
+   */
+  announcement: {
+    visible: false,
+    message: "Now booking for summer — limited appointments available.",
+    link: "/contact" as string | null,
+    linkLabel: "Book now →" as string | null,
+  },
 } as const;

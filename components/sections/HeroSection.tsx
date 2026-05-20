@@ -14,7 +14,7 @@ export function HeroSection() {
         <div className="absolute right-1/4 top-1/3 h-24 w-24 rounded-full border border-brown/10" />
       </div>
 
-      <div className="container-custom relative flex min-h-[85vh] items-center pt-28 pb-16 md:min-h-screen md:pt-32 md:pb-24">
+      <div className="container-custom relative flex min-h-[85vh] items-center home-hero-top pb-16 md:min-h-screen md:pb-24">
         <motion.div
           initial="hidden"
           animate="visible"
