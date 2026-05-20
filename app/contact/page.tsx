@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { formatHours } from "@/lib/hours";
 import { siteConfig } from "@/lib/site";
+import { ReviewCTA } from "@/components/sections/ReviewCTA";
 
 export const metadata: Metadata = {
   title: "Contact & Book",
@@ -93,6 +94,7 @@ export default function ContactPage() {
           </article>
         </div>
       </section>
+      <ReviewCTA />
     </>
   );
 }
