@@ -55,6 +55,17 @@ This project uses **Tailwind CSS v4**, not v3. Key differences:
 
 ## Business data
 All contact details, opening hours, social links, tagline and business name are in **`lib/site.ts`**. Always import from there — never hardcode business data in components.
+
+## Announcement banner
+A thin fixed banner sits above the navigation bar. It is fully controlled from **`lib/site.ts`** — no code changes needed to update it:
+
+| Field | Type | Purpose |
+|---|---|---|
+| `announcement.visible` | `boolean` | `true` shows the banner; `false` hides it (and collapses its height) |
+| `announcement.message` | `string` | Banner copy — keep to one short sentence |
+| `announcement.link` | `string \| null` | Optional CTA href; set to `null` for no button |
+| `announcement.linkLabel` | `string \| null` | Optional CTA label; set to `null` for no button |
+
 ## Deployment
 - CI runs on pull requests to `main` (build + type-check)
 - Deploys run automatically on push to `main` via GitHub Actions → GitHub Pages

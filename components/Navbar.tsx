@@ -39,7 +39,7 @@ export function Navbar() {
       : "bg-transparent";
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 z-50" style={{ top: "var(--banner-h, 0rem)" } as React.CSSProperties}>
       <nav
         className={`border-b border-transparent transition-all duration-300 ${shellClassName}`}
         aria-label="Primary"

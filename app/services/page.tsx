@@ -50,7 +50,7 @@ const serviceGroups = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-cream via-surface to-surface-dark pt-32 pb-16 sm:pt-36">
+      <section className="bg-gradient-to-br from-cream via-surface to-surface-dark hero-top pb-16">
         <div className="container-custom max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
             Services

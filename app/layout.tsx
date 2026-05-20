@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { siteConfig } from "@/lib/site";
@@ -105,7 +106,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${playfair.variable} ${inter.variable}`}
+      style={{ "--banner-h": siteConfig.announcement.visible ? "2.5rem" : "0rem" } as React.CSSProperties}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -115,10 +120,12 @@ export default function RootLayout({
       <body className="min-h-screen bg-cream text-brown antialiased">
         <a
           href="#main-content"
-          className="sr-only absolute left-4 top-4 z-[60] rounded-full bg-gold px-5 py-3 text-sm font-semibold text-brown shadow-lg focus:not-sr-only"
+          className="sr-only absolute left-4 z-[60] rounded-full bg-gold px-5 py-3 text-sm font-semibold text-brown shadow-lg focus:not-sr-only"
+          style={{ top: "calc(var(--banner-h, 0rem) + 1rem)" } as React.CSSProperties}
         >
           Skip to main content
         </a>
+        <AnnouncementBanner />
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main id="main-content" className="flex-1">
