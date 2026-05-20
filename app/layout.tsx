@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import Script from "next/script";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -116,8 +115,23 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Google Tag Manager — placed in <head> as early as possible */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${siteConfig.gtmContainerId}');`,
+          }}
+        />
       </head>
       <body className="min-h-screen bg-cream text-brown antialiased">
+        {/* Google Tag Manager (noscript) — immediately after opening <body> */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${siteConfig.gtmContainerId}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <a
           href="#main-content"
           className="sr-only absolute left-4 z-[60] rounded-full bg-gold px-5 py-3 text-sm font-semibold text-brown shadow-lg focus:not-sr-only"
@@ -134,19 +148,6 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-      {/* Google Analytics — replace G-XXXXXXXXXX in lib/site.ts with your real Measurement ID */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.ga4MeasurementId}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${siteConfig.ga4MeasurementId}');
-        `}
-      </Script>
     </html>
   );
 }
