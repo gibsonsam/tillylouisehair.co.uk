@@ -19,6 +19,12 @@ export const siteConfig = {
    */
   ga4MeasurementId: "G-WTEHZF3G51",
 
+  /**
+   * Google Tag Manager container ID.
+   * Found in GTM → Admin → container settings.
+   */
+  gtmContainerId: "GTM-N7VWFW24",
+
   /** Short tagline shown in the footer. */
   tagline:
     "Premium hairdressing with a warm, boutique touch. Elegant cuts, bespoke colour and styling for every occasion.",
