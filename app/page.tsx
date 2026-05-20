@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <ServicesPreview />
-      <GalleryPreview />
-      <AboutSnippet />
-      <ContactSection />
-      <ReviewCTA />
+      <HeroSection id="hero" />
+      <ServicesPreview id="services" />
+      <GalleryPreview id="gallery" />
+      <AboutSnippet id="about" />
+      <ContactSection id="contact" />
+      <ReviewCTA id="reviews" />
     </>
   );
 }

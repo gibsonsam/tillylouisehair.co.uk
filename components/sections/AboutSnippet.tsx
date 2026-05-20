@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const transition = { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const };
 
-export function AboutSnippet() {
+export function AboutSnippet({ id }: { id?: string }) {
   return (
-    <section className="section-padding bg-surface">
+    <section id={id} className="section-padding bg-surface">
       <motion.div
         className="container-custom grid items-center gap-10 md:grid-cols-2"
         initial={{ opacity: 0, y: 24 }}
