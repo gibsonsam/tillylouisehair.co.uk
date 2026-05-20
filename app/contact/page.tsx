@@ -29,7 +29,8 @@ export default function ContactPage() {
       </section>
 
       <section className="section-padding bg-cream">
-        <div className="container-custom grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="container-custom space-y-8">
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <article className="rounded-[2rem] bg-surface p-6 sm:p-8">
             <h2 className="text-2xl text-brown sm:text-3xl">Contact details</h2>
             <div className="mt-6 space-y-5 text-base leading-8 text-muted">
@@ -92,6 +93,16 @@ export default function ContactPage() {
               />
             </div>
           </article>
+        </div>
+
+          <div className="rounded-[2rem] bg-brown px-6 py-10 text-center sm:px-10">
+            <h2 className="text-3xl text-cream sm:text-4xl">Mobile appointments</h2>
+            <p className="mt-4 text-base leading-8 text-cream/80">
+              Can't make it to the salon? We also offer mobile appointments for
+              clients who prefer the convenience of having their hair done at home. Get in touch
+              to discuss availability and pricing.
+            </p>
+          </div>
         </div>
       </section>
       <ReviewCTA />
