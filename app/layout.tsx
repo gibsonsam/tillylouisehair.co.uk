@@ -108,7 +108,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${inter.variable}`}
-      style={{ "--banner-h": siteConfig.announcement.visible ? "2.5rem" : "0rem" } as React.CSSProperties}
+      style={{ "--banner-h": siteConfig.announcement.visible ? "3.5rem" : "0rem" } as React.CSSProperties}
     >
       <head>
         <script

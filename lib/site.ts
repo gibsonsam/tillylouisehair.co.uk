@@ -89,8 +89,8 @@ export const siteConfig = {
    * Set `link` / `linkLabel` to null to show the message without a CTA.
    */
   announcement: {
-    visible: false,
-    message: "Now booking for summer — limited appointments available.",
+    visible: true,
+    message: "Unavailable from 15th September - 13th October. Book ahead to secure your slot.",
     link: "/contact" as string | null,
     linkLabel: "Book now →" as string | null,
   },
