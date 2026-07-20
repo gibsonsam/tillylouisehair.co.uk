@@ -11,7 +11,7 @@ export function AnnouncementBanner() {
   if (!announcement.visible) return null;
 
   return (
-    <div className="fixed inset-x-0 top-0 z-[55] flex h-10 items-center justify-center gap-3 bg-brown px-4 text-center text-xs font-medium tracking-wide text-cream">
+    <div className="fixed inset-x-0 top-0 z-[55] flex h-15 items-center justify-center gap-3 bg-brown px-4 text-center text-xs font-medium tracking-wide text-cream">
       <span>{announcement.message}</span>
       {announcement.link && announcement.linkLabel && (
         <Link
